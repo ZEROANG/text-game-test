@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的文字游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 临时基础样式，用于快速开始 */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+        .game-container {
+            background: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>欢迎来到我的文字游戏</h1>
+        <div id="game-content">
+            <!-- 游戏内容将在这里显示 -->
+            <p id="scene-text">游戏加载中...</p>
+        </div>
+        <div id="choices">
+            <!-- 选择按钮将在这里生成 -->
+        </div>
+        <div id="player-stats">
+            <p>生命: <span id="health">100</span> | 
+               金钱: <span id="money">50</span> | 
+               天数: <span id="day">1</span>
+            </p>
+        </div>
+        <div id="controls">
+            <button onclick="game.save()">保存游戏</button>
+            <button onclick="game.load()">读取游戏</button>
+            <button onclick="game.reset()">重新开始</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
